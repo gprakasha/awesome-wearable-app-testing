@@ -6,6 +6,16 @@ A curated list of tools, frameworks, platforms, and learning resources for testi
 
 Wearable apps have constraints and failure modes that general mobile testing guides often miss: tiny screens, intermittent phone connectivity, sensor data, background execution, and tight battery budgets. This guide helps developers and QA teams find relevant resources and build practical test plans for those experiences.
 
+## Practical outputs
+
+Beyond curated links, this repo now includes practical wearable testing assets that contributors and AI coding agents can use directly.
+
+- [Wearable test planner](skills/wearable-test-planner.md) — turns a product or user journey into a wearable-focused test matrix
+- [Wearable connectivity debugger](skills/wearable-connectivity-debugger.md) — guides sync, disconnect, recovery, and companion-device testing
+- [Wearable test case template](templates/wearable-test-case-template.md) — reusable format for real-world wearable scenarios
+- [AGENTS.md](AGENTS.md) — repo instructions for contributors and agent-driven work
+- [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) — contributor checklist for new entries and changes
+
 ## Start here
 
 - **Testing a Wear OS app?** Start with [Wear OS documentation](https://developer.android.com/training/wearables), [Compose for Wear OS](https://developer.android.com/training/wearables/compose), and the [Wear OS testing checklist](#wear-os-testing).
@@ -15,6 +25,7 @@ Wearable apps have constraints and failure modes that general mobile testing gui
 
 ## Contents
 
+- [Practical outputs](#practical-outputs)
 - [Platforms and official documentation](#platforms-and-official-documentation)
 - [Platform-focused testing](#platform-focused-testing)
 - [Test automation](#test-automation)
@@ -34,7 +45,7 @@ Wearable apps have constraints and failure modes that general mobile testing gui
 - [Wear OS documentation](https://developer.android.com/training/wearables) — Platform guidance for building Wear OS apps.
 - [Compose for Wear OS](https://developer.android.com/training/wearables/compose) — UI development guidance and components for Wear OS.
 - [Wear OS app quality](https://developer.android.com/docs/quality-guidelines/wear-app-quality) — Quality guidelines to consider when validating a Wear OS app.
-- [Wear OS Data Layer](https://developer.android.com/training/wearables/data/overview) — APIs for communication and data sync between a Wear OS device and its paired phone. This is distinct from an app's direct Bluetooth Low Energy (BLE) connection to a peripheral.
+- [Wear OS Data Layer](https://developer.android.com/training/wearables/data/overview) — APIs for communication and data sync between a Wear OS device and its paired phone.
 
 ### watchOS
 
@@ -99,7 +110,7 @@ Test the complete phone-and-wearable experience, not only each app in isolation.
 
 ### Platform communication resources
 
-- [Wear OS Data Layer overview](https://developer.android.com/training/wearables/data/overview) — Phone–Wear OS app communication; test its sync and delivery semantics separately from direct peripheral BLE.
+- [Wear OS Data Layer overview](https://developer.android.com/training/wearables/data/overview) — Phone–Wear OS app communication; test its sync and delivery semantics separately from direct BLE.
 - [Android Bluetooth overview](https://developer.android.com/develop/connectivity/bluetooth) — Android Bluetooth APIs and concepts for apps that communicate with Bluetooth devices.
 - [Android Bluetooth permissions](https://developer.android.com/develop/connectivity/bluetooth/permissions) — Permission behavior to include in setup, denial, and recovery tests.
 - [Apple WatchConnectivity](https://developer.apple.com/documentation/watchconnectivity) — iPhone–Apple Watch app communication.
@@ -129,7 +140,7 @@ For cloud device labs, confirm explicitly that the service provides access to th
 - [Apple HealthKit](https://developer.apple.com/documentation/healthkit) — Health and fitness data APIs for Apple platforms.
 - [Garmin Connect IQ documentation](https://developer.garmin.com/connect-iq/overview/) — Platform APIs and developer resources for Garmin devices.
 
-When testing sensor-driven features, cover missing, delayed, stale, interrupted, and implausible readings. Test permission denial and revocation, and do not treat simulated readings as a substitute for validating real-device behavior.
+When testing sensor-driven features, cover missing, delayed, stale, interrupted, and implausible readings. Test permission denial and revocation, and do not treat simulated readings as a substitute for real-device validation.
 
 ## Performance and battery
 
